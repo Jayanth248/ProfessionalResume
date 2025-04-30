@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jayanth Singaladevi - Sr. Automation Engineer</title>
     <link rel="icon" type="image/png"  type=image/x-icon href="sunlight.png">
+    
+<link rel="icon" type="image/png"  type=image/x-icon href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -129,6 +133,67 @@
         input.error, textarea.error {
             border-color: #dc2626;
         }
+        html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem; /* Adjust based on the height of your navigation bar */
+}
+/* Mobile Menu */
+#menu {
+    flex-direction: column;
+    background-color: #2563eb; /* Same as the navigation bar */
+    position: absolute;
+    top: 100%; /* Below the navigation bar */
+    left: 0;
+    right: 0;
+    z-index: 40;
+    padding: 1rem;
+}
+@media (max-width: 1100px) { /* Adjust the max-width as needed */
+    nav {
+        display: none; /* Hides the navigation bar on smaller screens */
+    }
+   
+}
+@media (max-width: 1280px )  { /* Adjust the max-width as needed */
+    nav ul li a {
+        font-size: small; /* Reduces font size to 14px */
+    }
+   
+  
+   nav h1{
+    
+    font-size: medium !important;
+    
+    
+  }
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.scroll-to-top {
+    animation: blink 1s infinite; /* Blinking effect */
+}
+
+
+@media (min-width: 768px) { /* Adjust the max-width as needed */
+    #menu {
+        display: flex; /* Show the mobile menu */
+    }
+    #menu a {
+        padding: 1rem;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+    }
+}
+#menu a {
+    display: block;
+    padding: 0.5rem 0;
+    text-align: center;
+}
        
         .small-circle {
     width: 300px; /* Adjust the size as needed */
@@ -143,6 +208,20 @@
     </style>
 </head>
 <body>
+    <nav class="bg-blue-600 text-white py-4 fixed top-0 left-0 w-full z-50 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold">Jayanth Singaladevi</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#certifications" class="hover:text-blue-200 transition duration-300">Certifications</a></li>
+                <li><a href="#skills" class="hover:text-blue-200 transition duration-300">Technical Skills</a></li>
+                <li><a href="#summary" class="hover:text-blue-200 transition duration-300">Professional Summary</a></li>
+                <li><a href="#experience" class="hover:text-blue-200 transition duration-300">Work Experience</a></li>
+                <li><a href="#achievements" class="hover:text-blue-200 transition duration-300">Key Achievements</a></li>
+                <li><a href="#contact" class="hover:text-blue-200 transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
     
     <!-- Header Section -->
     <header class="gradient-bg text-white">
@@ -186,7 +265,7 @@
     </header>
 
     <!-- Certifications Section -->
-    <section class="py-12 bg-white">
+    <section id="certifications" class="py-12 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 text-center">Certifications</h2>
             <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
@@ -205,21 +284,7 @@
                 <!-- ISTQB Certified Tester -->
                 <div class="cert-logo flex flex-col items-center">
                     <div class="w-32 h-32 mb-4">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-                            <!-- ISTQB Logo -->
-                            <defs>
-                                <linearGradient id="istqbGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#005288;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#00305a;stop-opacity:1" />
-                                </linearGradient>
-                            </defs>
-                            <circle cx="100" cy="100" r="95" fill="url(#istqbGradient)" />
-                            <circle cx="100" cy="100" r="85" fill="white" />
-                            <circle cx="100" cy="100" r="75" fill="url(#istqbGradient)" />
-                            <text x="100" y="90" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">ISTQB</text>
-                            <text x="100" y="115" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">CERTIFIED</text>
-                            <text x="100" y="135" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">TESTER</text>
-                        </svg>
+                        <img src="CT_TAE_new.png" alt="JavaScript Badge" class="w-full h-full object-contain">
                     </div>
                     <h3 class="font-semibold text-center">ISTQB Certified Tester</h3>
                 </div>
@@ -227,32 +292,27 @@
                 <!-- Selenium Certified Tester -->
                 <div class="cert-logo flex flex-col items-center">
                     <div class="w-32 h-32 mb-4">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-                            <!-- Selenium Logo -->
-                            <defs>
-                                <linearGradient id="seleniumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#43B02A;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#00933B;stop-opacity:1" />
-                                </linearGradient>
-                            </defs>
-                            <circle cx="100" cy="100" r="95" fill="url(#seleniumGradient)" />
-                            <circle cx="100" cy="100" r="85" fill="white" />
-                            <circle cx="100" cy="100" r="75" fill="url(#seleniumGradient)" />
-                            <text x="100" y="85" font-family="Arial, sans-serif" font-size="60" font-weight="bold" text-anchor="middle" fill="white">Se</text>
-                            <text x="100" y="115" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">SELENIUM</text>
-                            <text x="100" y="135" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">CERTIFIED</text>
-                        </svg>
+                        <img src="certified-selenium-tester.png" alt="JavaScript Badge" class="w-full h-full object-contain">
                     </div>
-                    <h3 class="font-semibold text-center">Selenium Certified Tester</h3>
+                    <h3 class="font-semibold text-center">Certified Selenium Tester</h3>
                 </div>
+           
+            </div>
+            <div class="cert-logo flex flex-col items-center">
+                <div class="w-32 h-32 mb-4 mt-4"> <!-- Added mt-4 to move it lower -->
+                    <img src="badge-js.png" alt="JavaScript Badge" class="w-full h-full object-contain">
+                </div>
+                <h3 class="font-semibold text-center">JavaScript Certification</h3>
             </div>
         </div>
+       
+    </div>
     </section>
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-12">
         <!-- Skills Section -->
-        <section class="mb-16 scroll-trigger">
+        <section id="skills" class="mb-16 scroll-trigger">
             <h2 class="text-3xl font-bold mb-8 text-center">Technical Skills</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center">
@@ -292,13 +352,13 @@
                     <h3 class="font-medium">Selenium WebDriver</h3>
                 </div>
                 <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center">
-                    <div class="tooltip">Rest-Assured - 5 years</div>
+                    <div class="tooltip">Protractor - 5 years</div>
                     <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                         </svg>
                     </div>
-                    <h3 class="font-medium">Rest-Assured</h3>
+                    <h3 class="font-medium">Protractor</h3>
                 </div>
                 <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center">
                     <div class="tooltip">Cypress - 4.5 years</div>
@@ -318,15 +378,6 @@
                     </div>
                     <h3 class="font-medium">Cucumber</h3>
                 </div>
-                 <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center">
-                    <div class="tooltip">Postman - 5 years</div>
-                    <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                        </svg>
-                    </div>
-                    <h3 class="font-medium">Postman</h3>
-                </div>
                 <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center">
                     <div class="tooltip">REST API Testing - 5 years</div>
                     <div class="bg-pink-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
@@ -335,6 +386,15 @@
                         </svg>
                     </div>
                     <h3 class="font-medium">REST API Testing</h3>
+                </div>
+                <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="tooltip">REST Assured - 5 years</div>
+                    <div class="bg-pink-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-medium">REST Assured</h3>
                 </div>
                 <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center">
                     <div class="tooltip">Jenkins and CI/CD - 8 years</div>
@@ -392,26 +452,15 @@
                     </div>
                     <h3 class="font-medium">AI/LLM</h3>
                 </div>
-          
-             <!-- New Skill: AI/LLM -->
-                <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center">
-                    <div class="tooltip">SQL - 1.5 years</div>
-                    <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                        </svg>
-                    </div>
-                    <h3 class="font-medium">SQL</h3>
-                </div>
             </div>
         </section>
 
         <!-- Professional Summary -->
-        <section class="mb-16 bg-white rounded-xl shadow-lg p-8 scroll-trigger">
+        <section id="summary" class="mb-16 bg-white rounded-xl shadow-lg p-8 scroll-trigger">
             <h2 class="text-3xl font-bold mb-6">Professional Summary</h2>
             <ul class="space-y-3 list-disc pl-5">
                 <li>13+ years of experience in Information Technology as a Quality Assurance through Manual and Automation Testing of software applications.</li>
-                <li>Strong experience with Java, JavaScript, Selenium WebDriver, Rest-Assured, Cypress, JUnit, Cucumber, Gherkin language, TestNG, Maven, Git, AngularJS, QTest, VersionOne, Postman, RestAssured API, Docker and Jenkins tools.</li>
+                <li>Strong experience with Java, JavaScript, Selenium WebDriver, Protractor, Cypress, JUnit, Cucumber, Gherkin language, TestNG, Maven, Git, AngularJS, QTest, VersionOne, Postman, RestAssured API, Docker and Jenkins tools.</li>
                 <li>Solid experience on managing project dependencies, the plugins, and goals to build an automation project using build tool Maven using Project Object Model.</li>
                 <li>Key member in SDLC (Software Development Life Cycle) and STLC (Software Testing Life Cycle).</li>
                 <li>In-depth knowledge of Quality Assurance methodologies and Software Testing techniques such as Smoke Testing, Functional Testing, Regression Testing, Integration Testing, Positive-Negative Testing and Black Box Testing.</li>
@@ -467,7 +516,8 @@
                 </div>
             </div>
         </section>
-        <section class="mb-16 bg-white rounded-xl shadow-lg p-8 scroll-trigger">
+        <!-- Educational Qualification Section -->
+<section  class="mb-16 bg-white rounded-xl shadow-lg p-8 scroll-trigger">
     <h2 class="text-3xl font-bold mb-6">Educational Qualification</h2>
     <div class="space-y-4">
         <div class="flex items-start">
@@ -485,7 +535,7 @@
 </section>
 
         <!-- Experience Timeline -->
-        <section class="mb-16 scroll-trigger">
+        <section id="experience" class="mb-16 scroll-trigger">
             <h2 class="text-3xl font-bold mb-8 text-center">Work Experience</h2>
             <div class="relative pl-12 md:pl-16">
                 <div class="timeline-item mb-12 relative">
@@ -604,7 +654,7 @@
         </section>
 
         <!-- Key Achievements -->
-        <section class="mb-16 bg-white rounded-xl shadow-lg p-8 scroll-trigger">
+        <section id="achievements" class="mb-16 bg-white rounded-xl shadow-lg p-8 scroll-trigger">
             <h2 class="text-3xl font-bold mb-6">Key Achievements</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="border-l-4 border-blue-500 pl-4">
@@ -635,7 +685,7 @@
         </section>
 
         <!-- Contact Form -->
-        <section class="bg-white rounded-xl shadow-lg p-8 scroll-trigger">
+        <section id="contact" class="bg-white rounded-xl shadow-lg p-8 scroll-trigger">
             <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
@@ -712,14 +762,17 @@
                 <div class="mb-4 md:mb-0">
                     <h2 class="text-2xl font-bold">Jayanth Singaladevi</h2>
                     <p>Sr. Automation Engineer / Sr. SDET</p>
+                    <a href="#" class="scroll-to-top">
+                        Scroll to Top
+                    </a>
                 </div>
                 <div class="flex space-x-4">
-                    <a href="#" class="hover:text-blue-200 transition duration-300">
+                    <a href="https://www.linkedin.com/in/jayanth-singaladevi-72b14255" target="_blank" class="hover:text-blue-200 transition duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                         </svg>
                     </a>
-                    <a href="#" class="hover:text-blue-200 transition duration-300">
+                    <a href="" class="hover:text-blue-200 transition duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
@@ -808,6 +861,12 @@
                 observer.observe(trigger);
             });
         });
+        const menuButton = document.getElementById('menuButton');
+    const menu = document.getElementById('menu');
+
+    menuButton.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93857bf961b6ff71',t:'MTc0NTk5OTgwNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
