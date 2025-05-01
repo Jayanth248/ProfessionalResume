@@ -490,46 +490,42 @@
         </section>
 
         <!-- Team Lead Experience Section -->
-        <section class="mb-16 bg-white rounded-xl shadow-lg p-8 scroll-trigger">
+       
+               <section class="mb-16 bg-white rounded-xl shadow-lg p-8 scroll-trigger">
             <h2 class="text-3xl font-bold mb-6">QA Team Lead Experience (4+ years)</h2>
             <div class="space-y-6">
                 <div>
                     <h3 class="text-xl font-semibold text-blue-600 mb-3">Leadership & Team Management</h3>
                     <ul class="list-disc pl-5 space-y-2">
-                        <li>Led a team of 8-10 QA engineers, providing technical guidance, mentoring, and career development support.</li>
-                        <li>Conducted regular one-on-one meetings with team members to address concerns, provide feedback, and set performance goals.</li>
-                        <li>Facilitated knowledge sharing sessions and internal training programs to enhance team skills in automation frameworks and testing methodologies.</li>
-                        <li>Managed resource allocation, task assignments, and workload distribution to ensure optimal team productivity and project delivery.</li>
+                        <li>Led a team of 8-10 QA engineers, providing technical guidance, mentoring, and career
+                            development support.</li>
+                        <li>Managed resource allocation, task assignments, and workload distribution to ensure optimal
+                            team productivity.</li>
+                        <li>Facilitated knowledge-sharing sessions and internal training programs to enhance team skills
+                            in automation frameworks.</li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="text-xl font-semibold text-blue-600 mb-3">Process Improvement & Quality Standards</h3>
                     <ul class="list-disc pl-5 space-y-2">
-                        <li>Established and maintained QA best practices, testing standards, and documentation templates across multiple projects.</li>
-                        <li>Implemented metrics-driven quality assessment processes that improved defect detection rates by 35% and reduced regression issues by 40%.</li>
-                        <li>Created comprehensive test strategy documents and quality management plans aligned with business objectives and compliance requirements.</li>
-                        <li>Introduced shift-left testing practices, resulting in earlier defect detection and a 25% reduction in late-stage bug fixes.</li>
+                        <li>Established QA best practices, testing standards, and documentation templates across
+                            multiple projects.</li>
+                        <li>Implemented metrics-driven quality assessment processes, improving defect detection rates by
+                            35%.</li>
+                        <li>Introduced shift-left testing practices, reducing late-stage bug fixes by 25%.</li>
                     </ul>
                 </div>
-                
-                <div>
-                    <h3 class="text-xl font-semibold text-blue-600 mb-3">Stakeholder Management & Communication</h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Served as the primary QA point of contact for project stakeholders, providing regular status updates and quality metrics reports.</li>
-                        <li>Collaborated with product owners, development leads, and business analysts to clarify requirements and establish testable acceptance criteria.</li>
-                        <li>Presented testing results and quality assessments to executive leadership, highlighting risks and recommending mitigation strategies.</li>
-                        <li>Facilitated cross-functional communication to resolve complex technical issues and ensure alignment between development and testing activities.</li>
-                    </ul>
-                </div>
-                
+
                 <div>
                     <h3 class="text-xl font-semibold text-blue-600 mb-3">Technical Leadership & Innovation</h3>
                     <ul class="list-disc pl-5 space-y-2">
-                        <li>Architected and implemented a modular test automation framework that reduced script maintenance effort by 40% and improved test reliability.</li>
-                        <li>Led the evaluation and adoption of new testing tools and technologies, including Playwright and AI-assisted testing solutions.</li>
-                        <li>Designed and implemented CI/CD pipeline integration for automated testing, enabling continuous quality feedback and faster release cycles.</li>
-                        <li>Pioneered the implementation of performance testing and security testing practices within the QA team, expanding testing coverage beyond functional requirements.</li>
+                        <li>Architected a modular test automation framework, reducing script maintenance effort by 40%.
+                        </li>
+                        <li>Integrated automated testing with CI/CD pipelines, enabling continuous quality feedback and
+                            faster releases.</li>
+                        <li>Led the adoption of Playwright and AI-assisted testing solutions for cross-browser and
+                            intelligent test case generation.</li>
                     </ul>
                 </div>
             </div>
@@ -801,6 +797,20 @@
     </footer>
 
     <script>
+        //Google Maps frame
+        const mapTooltip = document.getElementById('mapTooltip');
+let hideTimeout;
+
+document.querySelector('.group').addEventListener('mouseenter', () => {
+clearTimeout(hideTimeout); // Clear any existing timeout
+mapTooltip.classList.remove('hidden'); // Show the tooltip immediately
+});
+
+document.querySelector('.group').addEventListener('mouseleave', () => {
+hideTimeout = setTimeout(() => {
+    mapTooltip.classList.add('hidden'); // Hide the tooltip after 2 seconds
+}, 500); // 2-second delay
+});
         // Form validation
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
